@@ -16,9 +16,9 @@ public class Movie {
     }
 
 
-    public Movie(String title, String plot, String productionDate, boolean isAvailable) {
+    public Movie(String title, String comment, String productionDate, boolean isAvailable) {
         this.title = title;
-        this.comment = plot;
+        this.comment = comment;
         this.productionYear = productionDate;
         this.isAvailable = isAvailable;
     }
@@ -77,5 +77,16 @@ public class Movie {
 
     public void setAvailable(boolean available) {
         isAvailable = available;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", comment='" + comment + '\'' +
+                ", productionYear='" + productionYear + '\'' +
+                ", isAvailable=" + isAvailable +
+                '}';
     }
 }
